@@ -1,0 +1,97 @@
+*{
+    margin : 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;/*Ensures the body element takes up at least the full viewport height.*/
+    background-image: url(Computer-Programmer.jpg);/*Sets a background image using the URL*/
+    background-size: cover;/*Stretches the background image to cover the entire viewport area.*/
+    background-repeat: no-repeat;/*Prevents the image from repeating if it's smaller than the viewport.*/
+    background-position: center;/*Centers the background image horizontally and vertically.*/
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Sets a white background color and a subtle box shadow for the navigation element.*/
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+
+}
+/*label.logo{
+    color: lightslategray;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+*/
+nav ul{/*Styles the unordered list (ul) inside the nav element:*/
+    width: 100%;/*Makes the list take up the full width of the navigation bar*/
+    list-style: none;/*Removes default bullet points for list items.*/
+    display: flex;/*Arranges list items (li) in a flexbox layout*/
+    justify-content: flex-end;/* Aligns list items to the right side of the navigation bar*/
+    align-items: center;/*Aligns list items vertically in the center of the navigation bar*/
+}
+/*Sets the height of each navigation list item to 50 pixels.*/
+nav li{
+    height: 50px;
+}
+/*Styles the anchor tags (a) inside the navigation list items:
+height: 80%: Makes the link height close to the list item height.
+padding: 0 30px: Adds padding to the left and right of the link text.*/
+nav a{
+    height: 80%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    background-color: #f0f0f0;
+}
+nav li:first-child{
+    margin-right: auto;
+    text-decoration-color: blue;
+    font-weight: bold;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-decoration-break: -10px 0 10px rgb(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+   width: 100%;
+}
+.menu-bar{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+          display: none;
+    }
+}
+.menu-button{
+    display: block;
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
